@@ -1,0 +1,43 @@
+Installation Guide
+Prerequisites
+- Python 3.7 or higher
+- Jupyter Notebook or JupyterLab
+- Supporting libraries as specified in requirements.txt
+Steps
+1. Ensure Python 3.7 or higher is installed.
+2. Install Jupyter Notebook or JupyterLab if not already installed:
+3. Install required Python libraries using pip and requirements.txt:
+4. Open the bertnlp_model.ipynb notebook in Jupyter Notebook or JupyterLab.
+
+Model Training
+1. Place the training data in the specified directory, typically /content/drive/MyDrive/train.csv.
+2. Execute the cells in bertnlp_model.ipynb sequentially to train the model.
+3. The trained model will be saved as bert_toxic_model.pth.
+
+User Guide
+Setting Up the Program:
+1. Clone the repository or download the source code to your local machine.
+2. Navigate to the project directory in your terminal or command prompt.
+3. Install the required dependencies by running `pip install -r requirements.txt`.
+
+Training the Model with TensorBoard Visualization:
+1. Launch Jupyter Notebook or JupyterLab and open the bertnlp_model.ipynb file.
+2. Follow the instructions within the notebook to train the model on your dataset.
+   - Ensure that TensorBoard is running by executing `%load_ext tensorboard` and `%tensorboard --logdir runs` in separate cells.
+   - As the model trains, TensorBoard will display real-time metrics such as loss, accuracy, precision, recall, and F1 score.
+   - Use the TensorBoard interface to monitor the model's performance and to analyze the training process.
+3. After training, the model will be saved as bert_toxic_model.pth in the specified output directory.
+   - The TensorBoard logs will also be saved, allowing for post-training analysis.
+
+Using the GUI for Prediction and Monitoring Training Metrics:
+1. Ensure that the trained model bert_toxic_model.pth is in the correct directory as specified in predict.py.
+2. Run predict.py to start the graphical user interface (GUI).
+3. Enter the text you wish to analyze in the provided text field within the GUI.
+4. Click the 'Predict' button to get the toxicity predictions for the entered text.
+   - The GUI will display the prediction results, indicating the likelihood of each type of toxicity.
+5. To review the model's performance metrics such as F1 score, precision, and recall over the training period,
+   click the 'Show TensorBoard Metrics' button in the GUI.
+   - TensorBoard will provide visualizations of these metrics, allowing for in-depth analysis of the model's training process.
+
+
+FOR SIMPLICITY SAKE PREDICT FILE IS RAN IN ONE CELL IN THE BERTNLP.MODEL.IPYNB FILE
